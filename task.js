@@ -14,16 +14,33 @@
 // null если щита нет. Строка lion, если щит есть, и на нём изображен лев.
 // Функция возвращает true, если распознан Ланнистер, и false если не распознан.
 
+// Solution 1
+
+// function isLannisterSoldier(color, lion) {
+//   if (color === "red" && lion === null) {
+//     console.log(true);
+//   } else if (lion === "lion") {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// }
+
+// isLannisterSoldier("red", "lion"); // true
+// isLannisterSoldier("blue", null); // false
+
+// Solution 2
+
 function isLannisterSoldier(color, lion) {
   if (color === "red" && lion === null) {
-    console.log(true);
+    return true;
   } else if (lion === "lion") {
-    console.log(true);
+    return true;
   } else {
-    console.log(false);
+    return false;
   }
 }
 
 // Примеры вызова:
-isLannisterSoldier("red", "lion"); // true
-isLannisterSoldier("blue", null); // false
+console.log(isLannisterSoldier("red", "lion")); // true
+console.log(isLannisterSoldier("blue", null)); // false
